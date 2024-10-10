@@ -1,0 +1,195 @@
+@import '../../shared/colors.scss';
+
+@font-face {
+    font-family: "RubikMonoOne";
+    src: url('../../app/fonts/RubikMonoOne-Regular.ttf');
+}
+
+.UserCardStartPage:last-child{
+    flex-direction: row-reverse;
+
+}
+.UserCardStartPage{
+    font-family: "RubikMonoOne";
+    width: 100%;
+    height: 350px;
+    min-width: 700px;
+    max-width: 950px;
+    background-color: $Black;
+    background-size: cover;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $White;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+        .TextBlock{
+            rotate: -15deg;
+        }
+        .userName{
+            font-size: 65px;
+        }
+        .about{
+            opacity: 1;
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+            -o-transform: translateY(20px);
+        }
+        .ImageBlock img{
+            height: 90%;
+         }
+        .ImageBlock img::before{
+            content: '';
+            background-color: rgba(0, 0, 0, 0);
+         }
+
+         .Effect{
+            opacity: 0;
+            transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -o-transform: translateX(100%);
+}
+
+    }
+}
+
+.Effect{
+    opacity: 1;
+    transition: 0.2s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $Black;
+    mix-blend-mode: hue;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+
+.ImageBlock {
+    cursor: pointer;
+    padding: 20px;
+    position: relative;
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+        height: 80%;
+        border-radius: 200px;
+        -webkit-border-radius: 200p;
+        -moz-border-radius: 200p;
+        -ms-border-radius: 200p;
+        -o-border-radius: 200p;
+        border: 6px solid $Black;
+        object-fit: cover;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+}
+}
+
+
+.TextBlockBox{
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    min-width: 475px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.TextBlock{
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    transition: 0.3s;
+
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    .userName{
+        font-size: 40px;
+    }
+    .about{
+        position: absolute;
+        font-size: 20px;
+        opacity: 0;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+}
+
+.glitch {
+    position: relative;
+    padding: 30px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.glitch:before, .glitch:after {
+    top: 0;
+    content: attr(data-text);
+    position: absolute;
+    padding: 30px;
+}
+
+.glitch:before{
+    left: -2px;
+    text-shadow: 1px 0 $Blue;
+    animation: glitch-before 1s linear 0s infinite alternate;
+    -webkit-animation: glitch-before 1s linear 0s infinite alternate;
+}
+ .glitch:after{
+    left: 2px;
+    text-shadow: 1px 3px $Red;
+    animation: glitch-before 1s linear 0s infinite alternate;
+    -webkit-animation: glitch-before 1s linear 0s infinite alternate;
+}
+
+ @keyframes glitch-before {
+    $steps: 30;
+    @for $i from 0 through $steps {
+       #{percentage($i*(1/$steps))} {
+          clip: rect(random(100)+px, 400px, random(100)+px, 0);
+          left: random(4) - 2 + px;
+       }
+    }
+ }
+ @keyframes glitch-after {
+    $steps: 30;
+    @for $i from 0 through $steps {
+       #{percentage($i*(1/$steps))} {
+          clip: rect(random(100)+px, 400px, random(100)+px, 0);
+          left: random(4) - 2 + px;
+       }
+    }
+ }
