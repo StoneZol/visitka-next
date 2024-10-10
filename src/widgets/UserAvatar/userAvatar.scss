@@ -1,0 +1,63 @@
+@use '../../shared/colors';
+
+.UserAvatarBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    aspect-ratio: 1/1;
+    background-color: colors.$Black;
+}
+.UserAvatar{
+    width: 95%;
+    height: 95%;
+    position: relative;
+    perspective: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.UserAvatar::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: colors.$Black;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.UserAvatar:hover::before{
+    opacity: 0.3;
+}
+
+.UserAvatar img {
+    border: 6px solid colors.$White;
+    border-radius: 200px;
+    width: 90%;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    -ms-border-radius: 200px;
+    -o-border-radius: 200px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.UserAvatar:hover img{
+    width: 100%;
+}
