@@ -1,6 +1,9 @@
 import type { FC } from 'react';
+import { User } from '@/shared/Users';
 
-interface StoneZolPageProps {}
+interface StoneZolPageProps {
+    user:User;
+}
 
 const StoneZolPage: FC<StoneZolPageProps> = () => {
     return (

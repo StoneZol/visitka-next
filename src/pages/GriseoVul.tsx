@@ -1,6 +1,5 @@
 import type { FC } from 'react';
-import UserCardStartPage from '@/widgets/UserCardStartPage/UserCardStartPage';
-import {User, GriseoVul } from '@/shared/Users';
+import {User} from '@/shared/Users';
 
 
 interface GriseoVulProps{
