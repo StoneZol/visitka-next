@@ -41,7 +41,11 @@
             -o-transform: translateY(20px);
         }
         .ImageBlock a {
-            height: 90%;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
 }
         .ImageBlock img::before {
             content: '';
@@ -115,7 +119,10 @@
     align-items: center;
     overflow: hidden;
     a{
-        height: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 200px;
         transition: 0.3s;
         -webkit-transition: 0.3s;
@@ -127,10 +134,10 @@
         user-select: none;
         height: 100%;
         border-radius: 200px;
-        -webkit-border-radius: 200p;
-        -moz-border-radius: 200p;
-        -ms-border-radius: 200p;
-        -o-border-radius: 200p;
+        -webkit-border-radius: 200px;
+        -moz-border-radius: 200px;
+        -ms-border-radius: 200px;
+        -o-border-radius: 200px;
         border: 6px solid $Black;
         object-fit: cover;
         transition: 0.3s;
@@ -138,7 +145,7 @@
         -moz-transition: 0.3s;
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
-    }
+}
 }
 
 
@@ -151,6 +158,7 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    background-color: transparent;
 }
 
 .TextBlock{
@@ -236,11 +244,11 @@
             .TextBlock {
                 rotate: -9deg;
                 a{
-                    transform: translateX(10%);
-                    -webkit-transform: translateX(10%);
-                    -moz-transform: translateX(10%);
-                    -ms-transform: translateX(10%);
-                    -o-transform: translateX(10%);
+                    transform: translateX(10%) translateY(-3%);
+                    -webkit-transform: translateX(10%) translateY(-3%);
+                    -moz-transform: translateX(10%) translateY(-3%);
+                    -ms-transform: translateX(10%) translateY(-3%);
+                    -o-transform: translateX(10%) translateY(-3%);
 }
             }
             .userName {
@@ -251,11 +259,13 @@
             }
             .ImageBlock{
                 a{
-                    transform: translateX(-55%) translateY(10px);
-                    -webkit-transform: translateX(-55%) translateY(10px);
-                    -moz-transform: translateX(-55%) translateY(10px);
-                    -ms-transform: translateX(-55%) translateY(10px);
-                    -o-transform: translateX(-55%) translateY(10px);
+                    width: 200px;
+                    height: 200px;
+                    transform: translateX(-45%) translateY(5px);
+                    -webkit-transform: translateX(-45%) translateY(5px);
+                    -moz-transform: translateX(-45%) translateY(5px);
+                    -ms-transform: translateX(-45%) translateY(5px);
+                    -o-transform: translateX(-45%) translateY(5px);
 }
             }
     }
@@ -264,11 +274,12 @@
         max-width: 100%;
         padding: 0;
         a{
-            transform: translateY(20px);
-            -webkit-transform: translateY(20px);
-            -moz-transform: translateY(20px);
-            -ms-transform: translateY(20px);
-            -o-transform: translateY(20px);
+            width: 180px;
+            transform: translateY(15px);
+            -webkit-transform: translateY(15px);
+            -moz-transform: translateY(15px);
+            -ms-transform: translateY(15px);
+            -o-transform: translateY(15px);
 }
     }
 
@@ -277,7 +288,7 @@
     }
 
     .TextBlockBox{
-        height: 100px;
+        height: 70px;
         padding: 0;
         .TextBlock{
             transform: translateY(-20px);

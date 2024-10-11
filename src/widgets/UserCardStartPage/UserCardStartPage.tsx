@@ -4,6 +4,7 @@ import '@/widgets/UserCardStartPage/UserCardStartPage.scss'
 
 import { User } from '@/shared/Users';
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 interface UserCardStartPageProps {
@@ -24,7 +25,7 @@ const UserCardStartPage: FC<UserCardStartPageProps> = ({user}) => {
             </div>
             <div className={'ImageBlock'}>
             <Link href={user.link}>
-                <img src={user.img } alt={user.userName}/>
+                <Image src={user.img } alt={user.userName} layout="responsive" height={100} width={100} />
                 </Link>
             </div>
     
