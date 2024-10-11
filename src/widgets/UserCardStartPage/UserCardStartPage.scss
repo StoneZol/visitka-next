@@ -5,11 +5,7 @@
     src: url('../../app/fonts/RubikMonoOne-Regular.ttf');
 }
 
-.UserCardStartPage:last-child{
-    flex-direction: row-reverse;
-
-}
-.UserCardStartPage{
+.UserCardStartPage {
     font-family: "RubikMonoOne";
     width: 100%;
     height: 350px;
@@ -30,13 +26,13 @@
     overflow: hidden;
     position: relative;
     &:hover {
-        .TextBlock{
+        .TextBlock {
             rotate: -15deg;
         }
-        .userName{
+        .userName {
             font-size: 65px;
         }
-        .about{
+        .about {
             opacity: 1;
             transform: translateY(20px);
             -webkit-transform: translateY(20px);
@@ -44,25 +40,53 @@
             -ms-transform: translateY(20px);
             -o-transform: translateY(20px);
         }
-        .ImageBlock img{
+        .ImageBlock a {
             height: 90%;
-         }
-        .ImageBlock img::before{
+}
+        .ImageBlock img::before {
             content: '';
             background-color: rgba(0, 0, 0, 0);
-         }
+        }
+        .glitch:after,
+        .glitch:before {
+            opacity: 1;
+        }
 
-         .Effect{
+        .Effect {
             opacity: 0;
             transform: translateX(100%);
             -webkit-transform: translateX(100%);
             -moz-transform: translateX(100%);
             -ms-transform: translateX(100%);
             -o-transform: translateX(100%);
-}
+        }
 
     }
+    .TextBlock {
+        a{
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            position: relative;
+            color: $White;
+            text-decoration: none;
+            transition: 0.3s;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -ms-transition: 0.3s;
+            -o-transition: 0.3s;
 }
+    }
+}
+
+.UserCardStartPage:last-child{
+    flex-direction: row-reverse;
+}
+
 
 .Effect{
     opacity: 1;
@@ -79,17 +103,29 @@
 }
 
 .ImageBlock {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     padding: 20px;
     position: relative;
     height: 100%;
-    width: 500px;
+    width: 100%;
+    max-width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    img {
+    a{
         height: 80%;
+        border-radius: 200px;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+    }
+     img {
+        user-select: none;
+        height: 100%;
         border-radius: 200px;
         -webkit-border-radius: 200p;
         -moz-border-radius: 200p;
@@ -102,11 +138,12 @@
         -moz-transition: 0.3s;
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
-}
+    }
 }
 
 
 .TextBlockBox{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     padding: 20px;
     height: 100%;
     width: 100%;
@@ -117,15 +154,7 @@
 }
 
 .TextBlock{
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
     transition: 0.3s;
-
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
@@ -146,6 +175,7 @@
 }
 
 .glitch {
+    opacity: 1;
     position: relative;
     padding: 30px;
     transition: 0.3s;
@@ -156,6 +186,7 @@
 }
 
 .glitch:before, .glitch:after {
+    opacity: 0;
     top: 0;
     content: attr(data-text);
     position: absolute;
@@ -179,7 +210,7 @@
     $steps: 30;
     @for $i from 0 through $steps {
        #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 400px, random(100)+px, 0);
+          clip: rect(random(100)+px, 600px, random(100)+px, 0);
           left: random(4) - 2 + px;
        }
     }
@@ -188,8 +219,76 @@
     $steps: 30;
     @for $i from 0 through $steps {
        #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 400px, random(100)+px, 0);
+          clip: rect(random(100)+px, 600px, random(100)+px, 0);
           left: random(4) - 2 + px;
        }
     }
  }
+
+
+ @media screen and (max-width:930px) {
+    .UserCardStartPage{
+        min-width: 370px;
+        max-width: 800px;
+        height: 300px;
+        flex-direction: column-reverse;
+        &:hover {
+            .TextBlock {
+                rotate: -9deg;
+                a{
+                    transform: translateX(10%);
+                    -webkit-transform: translateX(10%);
+                    -moz-transform: translateX(10%);
+                    -ms-transform: translateX(10%);
+                    -o-transform: translateX(10%);
+}
+            }
+            .userName {
+                font-size: 35px;
+            }
+            .about {
+                font-size: 14px;
+            }
+            .ImageBlock{
+                a{
+                    transform: translateX(-55%) translateY(10px);
+                    -webkit-transform: translateX(-55%) translateY(10px);
+                    -moz-transform: translateX(-55%) translateY(10px);
+                    -ms-transform: translateX(-55%) translateY(10px);
+                    -o-transform: translateX(-55%) translateY(10px);
+}
+            }
+    }
+    .ImageBlock {
+        height: 250px;
+        max-width: 100%;
+        padding: 0;
+        a{
+            transform: translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+            -o-transform: translateY(20px);
+}
+    }
+
+    .userName{
+        font-size: 25px;
+    }
+
+    .TextBlockBox{
+        height: 100px;
+        padding: 0;
+        .TextBlock{
+            transform: translateY(-20px);
+            -webkit-transform: translateY(-20px);
+            -moz-transform: translateY(-20px);
+            -ms-transform: translateY(-20px);
+            -o-transform: translateY(-20px);
+        }
+    }
+    }
+    .UserCardStartPage:last-child{
+        flex-direction: column-reverse;
+    }
+}

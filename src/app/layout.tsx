@@ -8,7 +8,7 @@ export default function RootLayout({children} : Readonly < {
 } >) {
     return (
         <html lang="ru">
-            <body>наложене {children}
+            <body>{children}
             </body>
         </html>
     );
