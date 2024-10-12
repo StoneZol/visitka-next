@@ -1,4 +1,3 @@
-'use client'
 import type { FC } from 'react';
 import '@/widgets/UserCardStartPage/UserCardStartPage.scss'
 
@@ -15,20 +14,18 @@ const UserCardStartPage: FC<UserCardStartPageProps> = ({user}) => {
     return (
         <div className='UserCardStartPage' style={{backgroundImage: `url(${user.background})`}}>
             <div className='TextBlockBox'>
-                
                 <div className='TextBlock'>
                     <Link href={user.link}>
-                    <span className={'glitch userName'} data-text={user.userName}>{user.userName}</span>
-                    <span className={'glitch about'} data-text={user.about}> {user.about}</span>
+                        <span className={'glitch userName'} data-text={user.userName}>{user.userName}</span>
+                        <span className={'glitch about'} data-text={user.about}> {user.about}</span>
                     </Link>
                 </div>
             </div>
             <div className={'ImageBlock'}>
             <Link href={user.link}>
-                <Image src={user.img } alt={user.userName} layout="responsive" height={100} width={100} />
+                <Image src={user.img } alt={user.userName} layout="responsive" height={100} width={100} loading='lazy' />
                 </Link>
             </div>
-    
             <div className='Effect'></div>
         </div>
     );

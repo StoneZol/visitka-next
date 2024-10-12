@@ -4,14 +4,17 @@ export interface User{
     about: string;
     background?: string;
     link: string;
+    textAboutStack?: string;
+
 }
 
 export const Stone_Zol: User ={
     userName: 'Stone_Zol',
     img: 'https://avatars.githubusercontent.com/u/61286515?v=4',
-    about: 'Frontendер',
+    about: 'Frontend`er',
     background: 'https://sotni.ru/wp-content/uploads/2023/08/kosmos-vzryv-planety-1.webp',
-    link: '/Stone_Zol'
+    link: '/StoneZol',
+    textAboutStack: 'Технологии и инструменты в которых я активно развиваюсь',
 }
 
 export const GriseoVul: User ={

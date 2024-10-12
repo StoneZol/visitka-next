@@ -5,7 +5,31 @@
     src: url('../../app/fonts/RubikMonoOne-Regular.ttf');
 }
 
+.UserCardStartPage::before{
+    transition: 0.3s;
+    content: '';
+    width: 100%;
+    border-radius: 40px;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: inherit;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    z-index: -1;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
 .UserCardStartPage {
+    position: relative;
+    margin: 50px;
     font-family: "RubikMonoOne";
     width: 100%;
     height: 350px;
@@ -23,22 +47,21 @@
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    overflow: hidden;
-    position: relative;
+    // overflow: hidden;
     &:hover {
         .TextBlock {
             rotate: -15deg;
-        }
-        .userName {
-            font-size: 65px;
-        }
-        .about {
-            opacity: 1;
-            transform: translateY(20px);
-            -webkit-transform: translateY(20px);
-            -moz-transform: translateY(20px);
-            -ms-transform: translateY(20px);
-            -o-transform: translateY(20px);
+            .userName {
+                font-size: 65px;
+            }
+            .about {
+                opacity: 1;
+                transform: translateY(20px);
+                -webkit-transform: translateY(20px);
+                -moz-transform: translateY(20px);
+                -ms-transform: translateY(20px);
+                -o-transform: translateY(20px);
+            }
         }
         .ImageBlock a {
             transform: scale(1.1);
@@ -57,14 +80,14 @@
         }
 
         .Effect {
+            
             opacity: 0;
-            transform: translateX(100%);
-            -webkit-transform: translateX(100%);
-            -moz-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-            -o-transform: translateX(100%);
+            width: 0;
         }
-
+        &:before{
+            filter: blur(35px);
+            -webkit-filter: blur(35px);
+        }
     }
     .TextBlock {
         a{
@@ -85,14 +108,15 @@
             -o-transition: 0.3s;
 }
     }
-}
 
-.UserCardStartPage:last-child{
-    flex-direction: row-reverse;
-}
+
+// .UserCardStartPage:last-child{
+//     flex-direction: row-reverse;
+// }
 
 
 .Effect{
+    border-radius: 40px;
     opacity: 1;
     transition: 0.2s;
     position: absolute;
@@ -104,6 +128,10 @@
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
 }
 
 .ImageBlock {
@@ -119,6 +147,7 @@
     align-items: center;
     overflow: hidden;
     a{
+        width: 95%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -181,66 +210,19 @@
         -o-transform: translateY(0px);
 }
 }
-
-.glitch {
-    opacity: 1;
-    position: relative;
-    padding: 30px;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
 }
 
-.glitch:before, .glitch:after {
-    opacity: 0;
-    top: 0;
-    content: attr(data-text);
-    position: absolute;
-    padding: 30px;
-}
-
-.glitch:before{
-    left: -2px;
-    text-shadow: 1px 0 $Blue;
-    animation: glitch-before 1s linear 0s infinite alternate;
-    -webkit-animation: glitch-before 1s linear 0s infinite alternate;
-}
- .glitch:after{
-    left: 2px;
-    text-shadow: 1px 3px $Red;
-    animation: glitch-before 1s linear 0s infinite alternate;
-    -webkit-animation: glitch-before 1s linear 0s infinite alternate;
-}
-
- @keyframes glitch-before {
-    $steps: 30;
-    @for $i from 0 through $steps {
-       #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 600px, random(100)+px, 0);
-          left: random(4) - 2 + px;
-       }
-    }
- }
- @keyframes glitch-after {
-    $steps: 30;
-    @for $i from 0 through $steps {
-       #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 600px, random(100)+px, 0);
-          left: random(4) - 2 + px;
-       }
-    }
- }
 
 
  @media screen and (max-width:930px) {
     .UserCardStartPage{
-        min-width: 370px;
+        width: 80%;
+        min-width: 360px;
         max-width: 800px;
         height: 300px;
         flex-direction: column-reverse;
         &:hover {
+            .TextBlockBox{
             .TextBlock {
                 rotate: -9deg;
                 a{
@@ -249,17 +231,19 @@
                     -moz-transform: translateX(10%) translateY(-3%);
                     -ms-transform: translateX(10%) translateY(-3%);
                     -o-transform: translateX(10%) translateY(-3%);
-}
+
+                }
+                .userName {
+                    font-size: 35px;
+                }
+                .about {
+                    font-size: 14px;
+                }
             }
-            .userName {
-                font-size: 35px;
-            }
-            .about {
-                font-size: 14px;
-            }
+        }
             .ImageBlock{
                 a{
-                    width: 200px;
+                    width: 170px;
                     height: 200px;
                     transform: translateX(-45%) translateY(5px);
                     -webkit-transform: translateX(-45%) translateY(5px);
@@ -270,22 +254,19 @@
             }
     }
     .ImageBlock {
-        height: 250px;
+        height: 220px;
         max-width: 100%;
         padding: 0;
         a{
-            width: 180px;
+            width: 140px;
             transform: translateY(15px);
             -webkit-transform: translateY(15px);
             -moz-transform: translateY(15px);
             -ms-transform: translateY(15px);
             -o-transform: translateY(15px);
-}
+        }
     }
 
-    .userName{
-        font-size: 25px;
-    }
 
     .TextBlockBox{
         height: 70px;
@@ -296,10 +277,10 @@
             -moz-transform: translateY(-20px);
             -ms-transform: translateY(-20px);
             -o-transform: translateY(-20px);
+            .userName{
+                font-size: 25px;
+            }
         }
     }
-    }
-    .UserCardStartPage:last-child{
-        flex-direction: column-reverse;
     }
 }

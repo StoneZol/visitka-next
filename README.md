@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+```markdown
+# Visitka Next
 
-First, run the development server:
+**Visitka Next** - это веб-приложение визитка StoneZol и GriseoVul
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Демо
+
+Посмотреть развернутое приложение можно по следующей ссылке: [visitka-next.vercel.app](https://visitka-next.vercel.app/)
+
+## Репозиторий
+
+Исходный код проекта доступен на GitHub: [StoneZol/visitka-next](https://github.com/StoneZol/visitka-next)
+
+## Технологии
+
+Проект построен на следующих технологиях:
+
+- **Next.js**: фреймворк для React, позволяющий создавать серверные и статические приложения.
+- **Sass**: CSS-препроцессор, который позволяет писать более удобный и поддерживаемый CSS-код.
+- **Redux Toolkit**: библиотека для управления состоянием приложения, упрощающая работу с Redux.
+- **TypeScript**: строгий суперсет JavaScript, который добавляет статическую типизацию.
+
+## Установка
+
+Чтобы запустить проект локально, выполните следующие шаги:
+
+1. Клонируйте репозиторий:
+
+   ```bash
+   git clone https://github.com/StoneZol/visitka-next.git
+   ```
+
+2. Перейдите в каталог проекта:
+
+   ```bash
+   cd visitka-next
+   ```
+
+3. Установите зависимости:
+
+   ```bash
+   npm install
+   ```
+
+4. Запустите проект в режиме разработки:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Откройте браузер и перейдите по адресу [http://localhost:3000](http://localhost:3000).
+
+## Разработка
+
+- Для компиляции Sass используйте встроенные возможности Next.js.
+- Redux Toolkit используется для управления состоянием приложения. Обратите внимание на структуру срезов (slices) и хранилищ.
+- TypeScript обеспечивает типизацию и улучшает поддержку кода.
+
+## Деплой
+
+Проект развернут на Vercel. Чтобы внести изменения и развернуть их, просто сделайте коммит в основной ветке, и Vercel автоматически обновит приложение.
+
+## Контрибьюция
+
+Если вы хотите внести свой вклад в проект, пожалуйста, создайте форк репозитория, внесите изменения и создайте пул-реквест.
+
+## Лицензия
+
+Этот проект лицензирован под [MIT License](LICENSE).
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
