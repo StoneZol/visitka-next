@@ -1,7 +1,7 @@
 import '@/widgets/Stack/MyStack.scss'
 
 import Marquee from 'react-fast-marquee';
-import { Stone_Zol, User } from '@/shared/Users';
+import { Stone_Zol} from '@/shared/Users';
 import * as icons from '@/shared/Icons/FrontendStack/FrontendStackIcons';
 
 

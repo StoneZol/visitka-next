@@ -1,9 +1,8 @@
 import type { FC } from 'react';
 import '@/shared/Loader/Loader.scss'
 
-interface LoaderSvgProps {}
 
-const LoaderSvg: FC<LoaderSvgProps> = () => {
+const LoaderSvg: FC = () => {
     return (
         <div className='Loader'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

@@ -2,11 +2,10 @@
 import MyStack from '@/widgets/Stack/MyStack';
 import '@/app/StoneZol/StoneZol.scss';
 import '@/app/globals.scss'
-import { Suspense, type FC } from 'react';
+import { type FC } from 'react';
 
-interface StoneZolPageProps {}
 
-const StoneZolPage: FC<StoneZolPageProps> = () => {
+const StoneZolPage: FC = () => {
     return (
         <div className='StoneZolPage'>
              <MyStack/>
