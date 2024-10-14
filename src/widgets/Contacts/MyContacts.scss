@@ -1,0 +1,37 @@
+@import '../../shared/colors.scss';
+
+.MyContactsBox {
+    user-select: none;
+    color: $White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .MyContacts {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2px;
+    }
+
+}
+
+.grayScale {
+    a {
+        filter: grayscale(80%);
+        -webkit-filter: grayscale(80%);
+        &:hover {
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+        }
+    }
+}
+
+@media screen and (min-width:1921px) {
+    .MyContactsBox{
+        .MyContacts{
+            gap: 10px;
+        }
+    }
+}

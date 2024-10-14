@@ -37,7 +37,7 @@
     $steps: 30;
     @for $i from 0 through $steps {
        #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 600px, random(100)+px, 0);
+          clip: rect(random(200)+px, 700px, random(200)+px, 0);
           left: random(4) - 2 + px;
        }
     }
@@ -45,9 +45,9 @@
  @keyframes glitch-after {
     $steps: 30;
     @for $i from 0 through $steps {
-       #{percentage($i*(1/$steps))} {
-          clip: rect(random(100)+px, 600px, random(100)+px, 0);
-          left: random(4) - 2 + px;
+       #{percentage($i*(2/$steps))} {
+          clip: rect(random(200)+px, 700px, random(200)+px, 0);
+          left: random(2) - 1 + px;
        }
     }
  }

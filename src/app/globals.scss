@@ -19,7 +19,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center
+    align-items: center;
+    overflow-x: hidden;
 };
 
 body{
@@ -28,7 +29,5 @@ body{
 }
 
 @media screen and (max-width:930px) {
-    body{
-        width: 95%;
-    }
+
 }

@@ -1,10 +1,5 @@
 @import '../../shared/colors.scss';
 
-@font-face {
-    font-family: "RubikMonoOne";
-    src: url('../../app/fonts/RubikMonoOne-Regular.ttf');
-}
-
 .UserCardStartPage::before{
     transition: 0.3s;
     content: '';
@@ -14,8 +9,8 @@
     top: 0;
     position: absolute;
     background: inherit;
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
+    filter: contrast(50%) grayscale(100%) blur(10px);
+    -webkit-filter: contrast(50%) grayscale(100%) blur(10px);
     z-index: -1;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
@@ -30,7 +25,6 @@
 .UserCardStartPage {
     position: relative;
     margin: 50px;
-    font-family: "RubikMonoOne";
     width: 100%;
     height: 350px;
     min-width: 700px;
@@ -47,7 +41,6 @@
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    // overflow: hidden;
     &:hover {
         .TextBlock {
             rotate: -15deg;
@@ -85,9 +78,9 @@
             width: 0;
         }
         &:before{
-            filter: blur(35px);
-            -webkit-filter: blur(35px);
-        }
+            filter: contrast(80%) grayscale(0) blur(25px);
+            -webkit-filter: contrast(80%) grayscale(0) blur(25px);
+}
     }
     .TextBlock {
         a{
@@ -108,14 +101,8 @@
             -o-transition: 0.3s;
 }
     }
-
-
-// .UserCardStartPage:last-child{
-//     flex-direction: row-reverse;
-// }
-
-
 .Effect{
+    z-index: 12;
     border-radius: 40px;
     opacity: 1;
     transition: 0.2s;
@@ -135,8 +122,7 @@
 }
 
 .ImageBlock {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
+    z-index: 10;
     padding: 20px;
     position: relative;
     height: 100%;
@@ -147,6 +133,8 @@
     align-items: center;
     overflow: hidden;
     a{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
         width: 95%;
         height: 100%;
         display: flex;
@@ -160,6 +148,7 @@
         -o-transition: 0.3s;
     }
      img {
+        filter: hue-rotate(0.9turn);
         user-select: none;
         height: 100%;
         border-radius: 200px;
@@ -174,12 +163,13 @@
         -moz-transition: 0.3s;
         -ms-transition: 0.3s;
         -o-transition: 0.3s;
+        -webkit-filter: hue-rotate(0.9turn);
 }
 }
 
 
 .TextBlockBox{
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 11;
     padding: 20px;
     height: 100%;
     width: 100%;
@@ -196,19 +186,23 @@
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
-    .userName{
-        font-size: 40px;
+    a{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+        .userName{
+            font-size: 40px;
+        }
+        .about{
+            position: absolute;
+            font-size: 20px;
+            opacity: 0;
+            transform: translateY(0px);
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+            -o-transform: translateY(0px);
     }
-    .about{
-        position: absolute;
-        font-size: 20px;
-        opacity: 0;
-        transform: translateY(0px);
-        -webkit-transform: translateY(0px);
-        -moz-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        -o-transform: translateY(0px);
-}
+    }
 }
 }
 
@@ -224,15 +218,12 @@
         &:hover {
             .TextBlockBox{
             .TextBlock {
-                rotate: -9deg;
-                a{
-                    transform: translateX(10%) translateY(-3%);
-                    -webkit-transform: translateX(10%) translateY(-3%);
-                    -moz-transform: translateX(10%) translateY(-3%);
-                    -ms-transform: translateX(10%) translateY(-3%);
-                    -o-transform: translateX(10%) translateY(-3%);
-
-                }
+                rotate: -10deg;
+                transform: translateX(10%) translateY(-30%);
+                -webkit-transform: translateX(10%) translateY(-30%);
+                -moz-transform: translateX(10%) translateY(-30%);
+                -ms-transform: translateX(10%) translateY(-30%);
+                -o-transform: translateX(10%) translateY(-30%);
                 .userName {
                     font-size: 35px;
                 }
@@ -243,8 +234,8 @@
         }
             .ImageBlock{
                 a{
-                    width: 170px;
-                    height: 200px;
+                    width: 180px;
+                    height: 180px;
                     transform: translateX(-45%) translateY(5px);
                     -webkit-transform: translateX(-45%) translateY(5px);
                     -moz-transform: translateX(-45%) translateY(5px);
@@ -254,7 +245,7 @@
             }
     }
     .ImageBlock {
-        height: 220px;
+        height: 400px;
         max-width: 100%;
         padding: 0;
         a{
@@ -270,6 +261,7 @@
 
     .TextBlockBox{
         height: 70px;
+        min-width: 300px;
         padding: 0;
         .TextBlock{
             transform: translateY(-20px);

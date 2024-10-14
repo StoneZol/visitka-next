@@ -1,3 +1,4 @@
+@import '../shared/colors.scss';
 .MainPage{
     position: relative;
     width: 100%;
@@ -6,4 +7,25 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    .MyContactsBox{
+        position: absolute;
+        bottom: 12.5vh;
+    }
 }
+
+@media (pointer: coarse) and (hover: none) {
+    .MainPage{
+        .MyContactsBox{
+            bottom: 0;
+        }
+    }
+  }
+
+  @media screen and (max-height:640px) {
+    .MainPage{
+        .MyContactsBox{
+            bottom: 5%;
+            z-index: -1;
+        }
+    }
+  }
