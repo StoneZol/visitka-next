@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import '@/widgets/UserShapka/UserShapka.scss'
 
 import { User } from '@/shared/Users';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { Rubik_Mono_One } from 'next/font/google';
 import bgStoneZol from '@/shared/Static/backgrounds/bgStoneZol.jpg';
 import Image from 'next/image';
