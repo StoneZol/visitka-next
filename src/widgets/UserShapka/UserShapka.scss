@@ -35,7 +35,7 @@
         position: absolute;
         left: 0;
         .MyContacts{
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
     }
 
@@ -108,6 +108,81 @@
             -moz-transform: translateY(50px);
             -ms-transform: translateY(50px);
             -o-transform: translateY(50px);
+        }
+    }
+}
+
+
+@media screen and (max-width:1040px) {
+
+    .UserShapka{
+        height: 250px;
+        .ImageBlock{
+            padding: 20px;
+            max-width: 200px;
+        }
+        .TextBlockBox{
+            min-width: 300px;
+        }
+        .TextBlock{
+            .userName{
+                font-size: 2.5rem;
+            }
+            .about{
+                font-size: 1.3rem;
+                transform: translateY(30px);
+                -webkit-transform: translateY(30px);
+                -moz-transform: translateY(30px);
+                -ms-transform: translateY(30px);
+                -o-transform: translateY(30px);
+}
+        }
+    }
+}
+
+@media screen and (max-width:624px) {
+
+    .UserShapka{
+        height: 200px;
+        .MyContactsBox {
+            bottom: 0;
+            .MyContacts{
+                flex-direction: row;
+            }
+        }
+        .ImageBlock{
+            padding: 10px;
+            max-width: 140px;
+            min-width: 140px;
+            img{
+                transform: translateY(100px) translateX(-10%);
+                -webkit-transform: translateY(100px) translateX(-10%);
+                -moz-transform: translateY(100px) translateX(-10%);
+                -ms-transform: translateY(100px) translateX(-10%);
+                -o-transform: translateY(100px) translateX(-10%);
+}
+        }
+        .TextBlockBox{
+            min-width: 200px;
+        }
+        .TextBlock{
+            transform: translateX(100px);
+            -webkit-transform: translateX(100px);
+            -moz-transform: translateX(100px);
+            -ms-transform: translateX(100px);
+            -o-transform: translateX(100px);
+            .userName
+{
+                font-size: 2rem;
+            }
+            .about{
+                font-size: 1rem;
+                transform: translateY(20px);
+                -webkit-transform: translateY(20px);
+                -moz-transform: translateY(20px);
+                -ms-transform: translateY(20px);
+                -o-transform: translateY(20px);
+}
         }
     }
 }

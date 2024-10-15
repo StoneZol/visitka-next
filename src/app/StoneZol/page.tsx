@@ -6,6 +6,7 @@ import MyStack from '@/widgets/Stack/MyStack';
 // import MyContacts from '@/widgets/Contacts/MyContacts';
 import { Stone_Zol } from '@/shared/Users';
 import UserShapka from '@/widgets/UserShapka/UserShapka';
+import MatrixBG from './../../features/MatrixBG';
 
 
 const StoneZolPage: FC = () => {
@@ -14,6 +15,7 @@ const StoneZolPage: FC = () => {
             <UserShapka user={Stone_Zol}/>
              <MyStack/>
              {/* <MyContacts user={Stone_Zol}/> */}
+             <MatrixBG/>
         </div>
     );
 }

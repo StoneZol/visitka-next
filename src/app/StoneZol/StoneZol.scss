@@ -4,5 +4,19 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-gap: 100px;
+gap: calc(7.5vh);
+position: relative;
+
+.Canva{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
 }
+}
+
+@media (pointer: coarse) and (hover: none) {
+    .StoneZolPage{
+        gap: 80px;
+    }
+  }

@@ -64,7 +64,33 @@
 }
 
 @media screen and (max-width: 844px) {
-    .StackIcon{
+    .StackIcon {
         margin: 0 10px;
+        height: 70px;
+        width: 70px;
+        svg {
+            width: 49px;
+            height: 49px;
+        }
+    }
+
+    .StackIcon:hover {
+        svg {
+            filter: grayscale(0%);
+            width: 69px;
+            height: 69px;
+            -webkit-filter: grayscale(0%);
+        }
     }
 }
+
+
+@media (pointer: coarse) and (hover: none) {
+    .StackIcon{
+        svg{
+            filter: grayscale(0%);
+            -webkit-filter: grayscale(0%);
+}
+    }
+  }
+
