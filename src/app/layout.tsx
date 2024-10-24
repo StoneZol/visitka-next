@@ -14,7 +14,7 @@ export default function RootLayout({children} : Readonly < {
                 {/* Open Graph (OG) мета-теги */}
                 <meta property="og:title" content="StoneZol"/>
                 <meta property="og:description" content="Обо мне"/>
-                <meta property="og:image" content="/"/>
+                <meta property="og:image" content="/src/shared/Static/avatars/b3.webp"/>
                 <meta property="og:url" content="https://visitka-next.vercel.app/"/>
                 <meta property="og:type" content="website"/>
 
