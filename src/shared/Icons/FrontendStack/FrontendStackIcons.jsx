@@ -1,7 +1,7 @@
 import React from 'react'
 import '@/shared/Icons/FrontendStack/FrontendStackIcons.scss'
 
-export function HTML_icon() {
+export const HTML_icon = React.memo(() => {
     return (
         <a href='https://html.spec.whatwg.org/multipage/'className='StackIcon'>
             <svg
@@ -21,10 +21,10 @@ export function HTML_icon() {
             </svg>
         </a>
     )
-}
+})
 
 
-export function CSS_icon() {
+export const CSS_icon = React.memo(()=>{
     return (
         <a href='https://www.w3.org/Style/CSS/'className='StackIcon'>
             <svg
@@ -44,9 +44,9 @@ export function CSS_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function GitHUB_icon() {
+export const GitHUB_icon = React.memo(()=>{
     return (
         <a href='https://github.com/'className='StackIcon'>
             <svg
@@ -63,9 +63,9 @@ export function GitHUB_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function JS_icon() {
+export const JS_icon = React.memo(()=>{
     return (
         <a href='https://ecma-international.org/publications-and-standards/standards/ecma-262/' className='StackIcon'>
             <svg
@@ -82,9 +82,9 @@ export function JS_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function TS_icon() {
+export const TS_icon = React.memo(()=>{
     return (
         <a href='https://www.typescriptlang.org/' className='StackIcon'>
             <svg
@@ -101,9 +101,9 @@ export function TS_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function React_icon() {
+export const React_icon = React.memo(()=>{
     return (
         <a href='https://react.dev/' className='StackIcon'>
             <svg
@@ -135,9 +135,9 @@ export function React_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function Next_icon() {
+export const Next_icon = React.memo(()=>{
     return (
         <a href='https://nextjs.org/' className='StackIcon'>
             <svg
@@ -154,9 +154,9 @@ export function Next_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function NPM_icon() {
+export const NPM_icon = React.memo(()=>{
     return (
         <a href='https://www.npmjs.com/' className='StackIcon'>
             <svg
@@ -190,9 +190,9 @@ export function NPM_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function Vercel_icon() {
+export const Vercel_icon = React.memo(()=>{
     return (
         <a href='https://vercel.com/' className='StackIcon'>
             <svg
@@ -207,9 +207,9 @@ export function Vercel_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function Sass_icon() {
+export const Sass_icon = React.memo(()=>{
     return (
         <a href='https://sass-lang.com/' className='StackIcon'>
             <svg
@@ -234,9 +234,9 @@ export function Sass_icon() {
             </svg>
         </a>
     )
-}
+})
 
-export function Less_icon() {
+export const Less_icon = React.memo(()=>{
     return (
         <a href='https://lesscss.org/' className='StackIcon'>
             <svg
@@ -298,10 +298,10 @@ export function Less_icon() {
             </svg>
         </a>
     );
-}
+})
 
 
-export function VSCode_icon() {
+export const VSCode_icon = React.memo(()=>{
     return (
         <a href='https://code.visualstudio.com/'className='StackIcon'>
             <svg
@@ -327,4 +327,4 @@ export function VSCode_icon() {
             </svg>
         </a>
     )
-}
+})

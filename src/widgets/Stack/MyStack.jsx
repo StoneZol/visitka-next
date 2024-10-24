@@ -5,9 +5,9 @@ import { Zen_Kaku_Gothic_Antique } from 'next/font/google'
 import Marquee from 'react-fast-marquee';
 import { Stone_Zol} from '@/shared/Users';
 import * as icons from '@/shared/Icons/FrontendStack/FrontendStackIcons';
-import bgStack from '@/shared/Static/backgrounds/bgStack.png'
+import bgStack from '@/shared/Static/backgrounds/bgStack.webp'
 
-import React from 'react'
+import React, { useMemo } from 'react'
 
 const zenKaku = Zen_Kaku_Gothic_Antique({
   preload: true,
@@ -17,6 +17,34 @@ const zenKaku = Zen_Kaku_Gothic_Antique({
 
 export default function MyStack() {
 
+    const iconList = useMemo(() => [
+        <icons.Next_icon/>,
+        <icons.CSS_icon/>,
+        <icons.TS_icon/>,
+        <icons.React_icon/>,
+        <icons.Sass_icon/>,
+        <icons.HTML_icon/>,
+        <icons.NPM_icon/>,
+        <icons.VSCode_icon/>,
+        <icons.Less_icon/>,
+        <icons.JS_icon/>,
+        <icons.Vercel_icon/>
+    ], [])
+
+    const iconList2 = useMemo(() => [
+        <icons.NPM_icon/>,
+        <icons.React_icon/>,
+        <icons.JS_icon/>,
+        <icons.TS_icon/>,
+        <icons.HTML_icon/>,
+        <icons.Next_icon/>,
+        <icons.Less_icon/>,
+        <icons.CSS_icon/>,
+        <icons.Vercel_icon/>,
+        <icons.VSCode_icon/>,
+        <icons.Sass_icon/>
+    ], [])
+
   return (
     <div className='MyStackBox' style={{backgroundImage: `url(${bgStack.src})`}}>
           <div className={`MyStack ${zenKaku.className}`}>
@@ -25,30 +53,10 @@ export default function MyStack() {
           </div>
           <div className='MarqueeBox'>
           <Marquee className='Marquee' speed={30}>
-            <icons.Next_icon/>
-            <icons.CSS_icon/>
-            <icons.TS_icon/>
-            <icons.React_icon/>
-            <icons.Sass_icon/>
-            <icons.HTML_icon/>
-            <icons.NPM_icon/>
-            <icons.VSCode_icon/>
-            <icons.Less_icon/>
-            <icons.JS_icon/>
-            <icons.Vercel_icon/>
+            {iconList}
           </Marquee>
           <Marquee className='Marquee' direction='right' speed={30}>
-            <icons.NPM_icon/>
-            <icons.React_icon/>
-            <icons.JS_icon/>
-            <icons.TS_icon/>
-            <icons.HTML_icon/>
-            <icons.Next_icon/>
-            <icons.Less_icon/>
-            <icons.CSS_icon/>
-            <icons.Vercel_icon/>
-            <icons.VSCode_icon/>
-            <icons.Sass_icon/>
+            {iconList2}
           </Marquee>
           </div>
 </div>

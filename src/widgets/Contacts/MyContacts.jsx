@@ -24,7 +24,7 @@ export default function MyContacts({user={}, showText=true, grayScale= false}) {
           <contacts.telegram_icon url={user.telegram}/>
           <contacts.whatsapp_icon url={user.whatsapp}/>
           <contacts.gmail_icon url={user.mail}/>
-          <contacts.linkedin_icon url={user.linkedin}/>
+          {/* <contacts.linkedin_icon url={user.linkedin}/> */}
           <contacts.gitHub_icon url={user.gitHub}/>
         </div>
     </div>

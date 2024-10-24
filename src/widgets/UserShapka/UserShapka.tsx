@@ -4,7 +4,8 @@ import '@/widgets/UserShapka/UserShapka.scss'
 import { User } from '@/shared/Users';
 // import Link from 'next/link';
 import { Rubik_Mono_One } from 'next/font/google';
-import bgStoneZol from '@/shared/Static/backgrounds/bgStoneZol.jpg';
+import bgStoneZol from '@/shared/Static/backgrounds/bgStoneZolv2.webp';
+import b3 from '@/shared/Static/avatars/b3.webp'
 import Image from 'next/image';
 import MyContacts from '../Contacts/MyContacts';
 
@@ -29,7 +30,7 @@ const UserShapka: FC<UserShapkaProps> = ({user}) => {
             </div>
         </div>
         <div className={'ImageBlock'}>
-            <Image src={user.img } alt={user.userName} layout="responsive" height={100} width={100} loading='lazy' />
+            <Image src={b3.src} alt={user.userName} layout="responsive" height={100} width={100} loading='lazy' />
         </div>
         <MyContacts user={user} showText={false} />
     </div>

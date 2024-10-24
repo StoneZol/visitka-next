@@ -2,7 +2,8 @@ import type { FC } from 'react';
 import '@/widgets/UserCardStartPage/UserCardStartPage.scss'
 
 import { Rubik_Mono_One } from 'next/font/google'
-import bgStoneZol from '@/shared/Static/backgrounds/bgStoneZol.jpg'
+import bgStoneZol from '@/shared/Static/backgrounds/bgStoneZolv2.webp'
+import b3 from '@/shared/Static/avatars/b3.webp'
 
 import { User } from '@/shared/Users';
 import Link from 'next/link';
@@ -33,7 +34,7 @@ const UserCardStartPage: FC<UserCardStartPageProps> = ({user}) => {
             </div>
             <div className={'ImageBlock'}>
             <Link href={user.link}>
-                <Image src={user.img } alt={user.userName} layout="responsive" height={100} width={100} loading='lazy' />
+                <Image src={b3.src} alt={user.userName} layout="responsive" height={100} width={100} loading='lazy' />
                 </Link>
             </div>
             <div className='Effect'></div>

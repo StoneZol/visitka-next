@@ -14,7 +14,6 @@ const StoneZolPage: FC = () => {
         <div className='StoneZolPage'>
             <UserShapka user={Stone_Zol}/>
              <MyStack/>
-             {/* <MyContacts user={Stone_Zol}/> */}
              <MatrixBG/>
         </div>
     );
