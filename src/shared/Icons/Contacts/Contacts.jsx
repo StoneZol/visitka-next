@@ -2,7 +2,7 @@ import React from 'react'
 import '@/shared/Icons/Contacts/Contacts.scss'
 
 
-export const telegram_icon= React.memo(({ url = '' }) => {
+export const telegram_icon= React.memo(function telegram_icon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -27,7 +27,7 @@ export const telegram_icon= React.memo(({ url = '' }) => {
     )
 })
 
-export const whatsapp_icon= React.memo(({ url = '' }) => {
+export const whatsapp_icon= React.memo(function whatsapp_icon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -59,7 +59,7 @@ export const whatsapp_icon= React.memo(({ url = '' }) => {
     )
 })
 
-export const gmail_icon= React.memo(({ url = '' }) => {
+export const gmail_icon= React.memo(function gmail_icon({url}){
     return (
         <a href={`mailto:${url}`} className="contactIcon">
             <svg
@@ -90,7 +90,7 @@ export const gmail_icon= React.memo(({ url = '' }) => {
     )
 })
 
-export const gitHub_icon= React.memo(({ url = '' }) => {
+export const gitHub_icon= React.memo(function gitHub_icon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -109,7 +109,7 @@ export const gitHub_icon= React.memo(({ url = '' }) => {
     )
 })
 
-export const linkedin_icon= React.memo(({ url = '' }) => {
+export const linkedin_icon= React.memo(function linkedin_icon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -129,7 +129,7 @@ export const linkedin_icon= React.memo(({ url = '' }) => {
     )
 })
 
-export const mobile_icon= React.memo(({ url = '' }) => {
+export const mobile_icon= React.memo(function mobile_icon({url}){
     return (
         <a href={`tel:${url}`} className="contactIcon">
             <svg

@@ -9,9 +9,6 @@ import b3 from '@/shared/Static/avatars/b3.webp'
 import Image from 'next/image';
 import MyContacts from '../Contacts/MyContacts';
 
-interface UserShapkaProps {
-    user: User;
-}
 
 const rubikMono = Rubik_Mono_One({
     preload: true,
@@ -19,6 +16,9 @@ const rubikMono = Rubik_Mono_One({
     weight: '400',
 
 })
+interface UserShapkaProps {
+    user: User;
+}
 
 const UserShapka: FC<UserShapkaProps> = ({user}) => {
     return (
