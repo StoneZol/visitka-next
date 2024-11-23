@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { NextPage } from 'next';
 import '@/widgets/UserCardStartPage/UserCardStartPage.scss'
 
 import { Rubik_Mono_One } from 'next/font/google'
@@ -8,7 +8,6 @@ import b3 from '@/shared/Static/avatars/b3.webp'
 import { User } from '@/shared/Users';
 import Link from 'next/link';
 import Image from 'next/image';
-
 
 const rubikMono = Rubik_Mono_One({
     preload: true,
@@ -20,7 +19,7 @@ interface UserCardStartPageProps {
     user: User;
 }
 
-const UserCardStartPage: FC<UserCardStartPageProps> = ({user}) => {
+const UserCardStartPage: NextPage<UserCardStartPageProps> = ({user}) => {
     return (
         // <div className={`UserCardStartPage ${rubikMono.className}`} style={{backgroundImage: `url(${user.background})`}}>
         <div className={`UserCardStartPage ${rubikMono.className}`} style={{backgroundImage: `url(${bgStoneZol.src})`}}>

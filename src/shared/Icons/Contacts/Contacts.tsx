@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
 import '@/shared/Icons/Contacts/Contacts.scss'
 
+interface IconProps {
+    url: string;
+  }
 
-export const telegram_icon= React.memo(function telegram_icon({url}){
+
+const TelegramIcon :FC <IconProps> = React.memo(function TelegramIcon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -27,7 +31,7 @@ export const telegram_icon= React.memo(function telegram_icon({url}){
     )
 })
 
-export const whatsapp_icon= React.memo(function whatsapp_icon({url}){
+const WhatsappIcon:FC <IconProps> = React.memo(function WhatsappIcon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -59,7 +63,7 @@ export const whatsapp_icon= React.memo(function whatsapp_icon({url}){
     )
 })
 
-export const gmail_icon= React.memo(function gmail_icon({url}){
+const GmailIcon:FC <IconProps> = React.memo(function GmailIcon({url}){
     return (
         <a href={`mailto:${url}`} className="contactIcon">
             <svg
@@ -90,7 +94,7 @@ export const gmail_icon= React.memo(function gmail_icon({url}){
     )
 })
 
-export const gitHub_icon= React.memo(function gitHub_icon({url}){
+const GitHubIcon:FC <IconProps> = React.memo(function GitHubIcon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -109,7 +113,7 @@ export const gitHub_icon= React.memo(function gitHub_icon({url}){
     )
 })
 
-export const linkedin_icon= React.memo(function linkedin_icon({url}){
+const LinkedinIcon:FC <IconProps> = React.memo(function LinkedinIcon({url}){
     return (
         <a href={url} className="contactIcon">
             <svg
@@ -129,7 +133,7 @@ export const linkedin_icon= React.memo(function linkedin_icon({url}){
     )
 })
 
-export const mobile_icon= React.memo(function mobile_icon({url}){
+const MobileIcon:FC <IconProps> = React.memo(function MobileIcon({url}){
     return (
         <a href={`tel:${url}`} className="contactIcon">
             <svg
@@ -147,3 +151,5 @@ export const mobile_icon= React.memo(function mobile_icon({url}){
         </a>
     )
 })
+
+export {MobileIcon,LinkedinIcon,GitHubIcon,GmailIcon,WhatsappIcon,TelegramIcon};
