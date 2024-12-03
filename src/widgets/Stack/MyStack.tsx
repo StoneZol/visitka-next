@@ -27,7 +27,7 @@ export default function MyStack() {
                     <h3>{Stone_Zol.textAboutStack}</h3>
                 </div>
                 <div className='MarqueeBox'>
-                    <Marquee className='Marquee' speed={30}>
+                    <Marquee className='Marquee' speed={30} pauseOnHover={true}>
                         <icons.Next_icon/>
                         <icons.CSS_icon/>
                         <icons.TS_icon/>
@@ -40,7 +40,7 @@ export default function MyStack() {
                         <icons.JS_icon/>
                         <icons.Vercel_icon/>
                     </Marquee>
-                    <Marquee className='Marquee' direction='right' speed={30}>
+                    <Marquee className='Marquee' direction='right' speed={30} pauseOnHover={true}>
                         <icons.NPM_icon/>
                         <icons.React_icon/>
                         <icons.JS_icon/>

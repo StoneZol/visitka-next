@@ -28,7 +28,7 @@ const MyContacts :FC<ContactProps>= ({user, showText =true, grayScale =false}) =
     { Component: contacts.TelegramIcon, url: user.telegram },
     { Component: contacts.WhatsappIcon, url: user.whatsapp },
     { Component: contacts.GmailIcon, url: user.mail },
-    { Component: contacts.TelegramIcon, url: user.gitHub },
+    { Component: contacts.GitHubIcon, url: user.gitHub },
   ];
 
   return (
