@@ -1,8 +1,6 @@
-
-```markdown
 # Visitka Next
 
-**Visitka Next** - это веб-приложение визитка StoneZol и GriseoVul
+**Visitka Next** - это веб-приложение визитка StoneZol
 
 ## Демо
 
