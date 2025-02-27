@@ -26,6 +26,7 @@ const MyContacts :FC<ContactProps>= ({user, showText =true, grayScale =false}) =
   const icons = [
     { Component: contacts.MobileIcon, url: user.phone },
     { Component: contacts.TelegramIcon, url: user.telegram },
+    { Component: contacts.LinkedinIcon, url: user.linkedin },
     { Component: contacts.WhatsappIcon, url: user.whatsapp },
     { Component: contacts.GmailIcon, url: user.mail },
     { Component: contacts.GitHubIcon, url: user.gitHub },

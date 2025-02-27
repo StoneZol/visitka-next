@@ -24,7 +24,7 @@ export const Stone_Zol: User ={
     whatsapp:'https://wa.me/79180513387',
     mail:'miha2000rus@gmail.com',
     gitHub:'https://github.com/StoneZol',
-    linkedin:'#',
+    linkedin:'https://www.linkedin.com/in/stonezol/',
     phone: '+79180513387',
 }
 
