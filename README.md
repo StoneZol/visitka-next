@@ -6,6 +6,8 @@
 
 Посмотреть развернутое приложение можно по следующей ссылке: [visitka-next.vercel.app](https://visitka-next.vercel.app/)
 
+![Prev](https://i.ibb.co/99hg4fkw/142frrsg.webp)
+
 ## Репозиторий
 
 Исходный код проекта доступен на GitHub: [StoneZol/visitka-next](https://github.com/StoneZol/visitka-next)
