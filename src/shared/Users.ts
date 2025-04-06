@@ -22,7 +22,7 @@ export const Stone_Zol: User ={
     textAboutStack: 'Технологии и инструменты в которых я активно развиваюсь',
     telegram:'https://t.me/Stone_Zol',
     whatsapp:'https://wa.me/79180513387',
-    mail:'miha2000rus@gmail.com',
+    mail:'shcherbakov.mikhail.dev@yandex.com',
     gitHub:'https://github.com/StoneZol',
     linkedin:'https://www.linkedin.com/in/stonezol/',
     phone: '+79180513387',
